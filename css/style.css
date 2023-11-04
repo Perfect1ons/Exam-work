@@ -1,0 +1,249 @@
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Ribeye";
+    src: url(../fonts/Ribeye-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gelasio";
+    src: url(../fonts/Gelasio-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 10px;
+}
+
+.header{
+    background-image: url(../img/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.header__container{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.nav__list{
+    color: #FFF;
+    font-family: "Roboto";
+    font-size: 18px;
+    position: relative;
+}
+
+.nav__list:last-child{
+    display: none;
+}
+
+.nav a::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.nav a:hover::after{
+    width: 100%;
+}
+
+.header__logo{
+    color: #FFF;
+    font-family: "Ribeye";
+    font-size: 24px;
+    letter-spacing: 1.44px;
+}
+
+.btn{
+    padding: 14px 35px;
+    background: #C9453B;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+}
+
+.content__title{
+    max-width: 690px;
+    color: #FFF;
+    font-family: Gelasio;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 78px */
+}
+
+.content__text{
+    max-width: 458px;
+    color: #ffffff96;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 28.8px */
+    margin: 30px 0px 40px 0px;
+}
+
+.card__title{
+    margin-top: 100px;
+    text-align: center;
+    font-family:" Gelasio";
+    font-size: 43px;
+    font-weight: 500;
+    line-height: 140%; /* 60.2px */
+}
+
+.image{
+    width: 100%;
+    height: auto;
+}
+
+.card__text{
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.527);
+}
+
+.card__box{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.card{
+    max-width: 360px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    transition: 0.3s;
+}
+
+.card__info{
+    max-width: 360px;
+    padding: 34px 27px;
+}
+
+.card__info .card__city{
+    padding-bottom: 10px;
+    font-family: "Gelasio";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 36px */
+    text-align: center;
+}
+
+.card:hover{
+    box-shadow: 0px 6px 35px 0px rgba(0, 0, 0, 0.08);
+}
+
+.hamburger{
+    display: none;
+}
+
+.nav.is-active{
+    transform: translateX(0);
+    transition: 0.5s;
+}
+
+
+@media screen and (max-width:1200px) {
+    .card__box{
+        max-width: 750px;
+        margin: 30px auto;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .content{
+        max-width: 992px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .nav{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 100vh;
+        background: linear-gradient(225deg, #3023AE -1%, #C86DD7 100.5%);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: 0s;
+        transform: translateX(100%);
+    }
+
+    .header__button{
+        display: none;
+    }
+
+    .nav__list:last-child{
+        display: block;
+    }
+
+    .hamburger{
+        display: block;
+    }
+    .content__text{
+        font-size: 16px;
+        margin: 15px 0px 20px 0px;
+    }
+    .content__title{
+        font-size: 9vw;
+    }
+    .card{
+        margin: 0px auto 0 auto;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width:800px){
+    .card{
+        margin: 0 auto;
+    }
+}
