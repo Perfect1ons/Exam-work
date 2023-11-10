@@ -177,8 +177,8 @@ body {
     max-width: 360px;
     padding: 34px 27px;
 }
-
-.card__info .card__city{
+ 
+.card__city{
     padding-bottom: 10px;
     font-family: "Gelasio";
     font-size: 24px;
@@ -236,26 +236,38 @@ body {
     font-weight: 700;
 }
 
+.slider__container{
+    padding: 0 15px;
+}
+
 .swiper {
     width: 100%;
     height: 100%;
-  }
+}
 
-  .swiper-slide {
+.swiper-wrapper{
+    display: flex;
+    gap: 50px;
+}
+
+.swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
     display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    flex-direction: column;
+}
 
-  .swiper-slide img {
+.swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
+
+.slider__title{
+    text-align: left;
+}
 
 .hamburger{
     display: none;
