@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="node_modules/swiper/swiper.css">
     <link rel="stylesheet" href="css/hamburgers.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -45,44 +46,126 @@
 
     <section class="section">
         <div class="container card__container">
-            <h2 class="card__title">Popular Location</h2>
-            <p class="card__text">For every one of us, travel came first. We’ve spent years living as nomads, pioneers, and voyagers— from island hopping in the</p>
+            <h2 class="title">Popular Location</h2>
+            <p class="text">For every one of us, travel came first. We’ve spent years living as nomads, pioneers, and voyagers— from island hopping in the</p>
             <div class="card__box">
                 <div class="card">
                     <img class="image" src="/img/img1 (7).png" alt="">
                     <div class="card__info">
                         <h3 class="card__city">Istanbul, Turkey</h3>
-                        <p class="card__text">Istanbul is a major city in Turkey that straddles Europe</p>
+                        <p class="text">Istanbul is a major city in Turkey that straddles Europe</p>
                     </div>
                 </div>
                 <div class="card">
                     <img class="image" src="/img/img1 (6).png" alt="">
                     <div class="card__info">
                         <h3 class="card__city">Kuala Lumpur, malaysia</h3>
-                        <p class="card__text">A 272-step long trek leads you to this century.</p>
+                        <p class="text">A 272-step long trek leads you to this century.</p>
                     </div>
                 </div>
                 <div class="card">
                     <img class="image" src="/img/img1 (5).png" alt="">
                     <div class="card__info">
                         <h3 class="card__city">Seoul, South Korea</h3>
-                        <p class="card__text">South Korea officially the Republic of Korea is a country in East Asia.</p>
+                        <p class="text">South Korea officially the Republic of Korea is a country in East Asia.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="section">
+        <div class="container">
+            <h2 class="title">Special Offers</h2>
+            <p class="text">With the New Year comes a refreshing sense of wanderlust, a longing in our souls to escape to warmer climates,</p>
+        </div>
+        <div class="slider__container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  <div class="swiper-slide">Slide 4</div>
+                  <div class="swiper-slide">Slide 5</div>
+                  <div class="swiper-slide">Slide 6</div>
+                  <div class="swiper-slide">Slide 7</div>
+                  <div class="swiper-slide">Slide 8</div>
+                  <div class="swiper-slide">Slide 9</div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+        </div>
+    </section>
 
-
-
-
-
-
-
-
-
-    
+    <!-- <section class="section">
+        <div class="container blog__container">
+            <h2 class="title">From Blog & News</h2>
+            <p class="text">Welcome to Community Conversations, a new interview series featuring Intrepid travellers, creatives and activists in our community.</p>
+            <div class="blog__box">
+                <div class="blog__box-1">
+                    <img class="image" src="img/img1 (4).png" alt="">
+                    <div class="box__info">
+                        <h4 class="box__title">Banff National Park</h4>
+                        <p class="text text__style-none">
+                            Banff National Park lies in the heart of the majestic Rocky Mountains in the province of Alberta, and showcases some of Canada's most beautiful scenery. Turquoise-colored lakes, snow-capped peaks, and glaciers are all easily accessible
+                        </p>
+                        <b class="blog__author">@thomasalva_adison</b>
+                    </div>
+                </div>
+                <div class="blog__box-2">
+                    <div class="blog__content">
+                        <img src="img/img1 (3).png" alt="">
+                        <div class="blog__content-info">
+                            <h4 class="box__title">The Hiroshima Peace!</h4>
+                            <p class="text text__style-none">It was formally opened to the public in August that year.</p>
+                            <b class="blog__author">@shova_bd88</b>
+                        </div>
+                    </div>
+                    <div class="blog__content">
+                        <img src="img/img1 (2).png" alt="">
+                        <div class="blog__content-info">
+                            <h4 class="box__title">The faithful prayers!</h4>
+                            <p class="text text__style-none">A major pilgrimage center for Hindus, the holy city.</p>
+                            <b class="blog__author">@adem/smith</b>
+                        </div>
+                    </div>
+                    <div class="blog__content">
+                        <img src="img/img1 (1).png" alt="">
+                        <div class="blog__content-info">
+                            <h4 class="box__title">Colourful waters!</h4>
+                            <p class="text text__style-none">Forest-driven water and energy cycles are poorly.</p>
+                            <b class="blog__author">@jhon7leew</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <script src="node_modules/swiper/swiper.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          breakpoints: {
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 50,
+            },
+          },
+        });
+      </script>
     <script>
         var hamburger = document.querySelector(".hamburger");
         var nav = document.querySelector(".nav");
@@ -91,5 +174,6 @@
           nav.classList.toggle("is-active");
         });
       </script>
+
 </body>
 </html>
