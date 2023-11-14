@@ -9,15 +9,15 @@ var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 10,
     freeMode: true,
-    // pagination: {
-    //   el: ".swiper-pagination",
-    //   clickable: true,
-    // },
-    scrollbar: {
-        el: ".swiper-scrollbar",
-    draggable: true,
-    dragSize: 100
-      },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    // scrollbar: {
+    //     el: ".swiper-scrollbar",
+    // draggable: true,
+    // dragSize: 100
+    //   },
     breakpoints: {
       480: {
         slidesPerView: 1,
