@@ -3,6 +3,7 @@ var nav = document.querySelector(".nav");
 hamburger.addEventListener("click", function() {
   hamburger.classList.toggle("is-active");
   nav.classList.toggle("is-active");
+  document.body.classList.toggle("fixed")
 });
 
 var swiper = new Swiper(".mySwiper", {

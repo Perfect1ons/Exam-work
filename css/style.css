@@ -19,6 +19,13 @@
     font-style: normal;
 }
 
+body.fixed{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 html,
 body {
   position: relative;
@@ -497,7 +504,7 @@ body {
 }
 
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:840px) {
     .nav{
         position: fixed;
         top: 0;
