@@ -588,7 +588,7 @@ body {
 }
 @media screen and (max-width:763px){
     .card{
-        max-width: 100%;
+        width: 550px;
     }
     .card__box{
         max-width: 100%;
@@ -597,7 +597,7 @@ body {
         max-width: 100%;
     }
     .image{
-        max-width: 100%;
+        width: 100%;
         max-height: 450px;
     }
     .card__info .text{
