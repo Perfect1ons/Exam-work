@@ -232,6 +232,7 @@ body {
 
 .blog__content{
     display: flex;
+    align-items: center;
     gap: 25px;
 }
 
@@ -281,6 +282,7 @@ body {
 .swiper {
     width: 100%;
     height: 100%;
+    padding-bottom: 35px;
 }
 
 .swiper-wrapper{
@@ -319,6 +321,7 @@ body {
     align-items: center;
     gap: 10px;
 }
+
 
 .grey__text{
     color: #000000b5;
@@ -450,6 +453,16 @@ body {
     letter-spacing: 0.96px;
 }
 
+button{
+    transition: 1s;
+}
+
+button:hover{
+    padding: 20px 40px;
+    box-shadow: 0 1px 10px 0 #e1675e;
+}
+
+
 /* Пример изменения цвета и размера точек пагинации */
 .swiper-pagination-bullet {
     background: #c9453b;
@@ -463,6 +476,13 @@ body {
     background: #C9453B;
 }
 
+@media screen and (min-width:1200px) {
+    .swiper-slide:nth-child(6),
+    .swiper-slide:nth-child(7){
+        display: none;
+    }
+}
+
 @media screen and (max-width:1200px) {
     .card__box{
         max-width: 750px;
@@ -472,6 +492,10 @@ body {
     }
     .content{
         max-width: 992px;
+    }
+    .swiper-slide:nth-child(3),
+    .swiper-slide:nth-child(4){
+        display: none;
     }
 }
 
@@ -524,10 +548,10 @@ body {
         right: 0;
         width: 250px;
         height: 100vh;
-        background:rgb(224, 224, 224);
+        background:#fffefed5;
         flex-direction: column;
         justify-content: center;
-        align-items: start;
+        align-items: center;
         gap: 2rem;
         transition: 0s;
         transform: translateX(100%);
@@ -538,6 +562,10 @@ body {
     .nav__list{
         color: rgb(40, 40, 40);
         font-size: 24px;
+        transition: 1s;
+        text-align: center;
+        outline: none;
+        border: none;
     }
     .nav__list:nth-child(1):hover,
     .nav__list:nth-child(2):hover,
@@ -545,6 +573,7 @@ body {
     .nav__list:nth-child(4):hover,
     .nav__list:nth-child(5):hover{
         background: #C9453B;
+        border: 1px solid white;
         width: 100%;
         color: white;
         padding: 15px;
@@ -583,6 +612,7 @@ body {
         max-width: 100%;
     }
     .blog__content-info{
+        height: 100%;
         padding: 20px 0px;
     }
     .blog__content .image{
@@ -597,6 +627,10 @@ body {
     }
     .blog__content-info .blog__author{
         font-size: 4vw;
+    }
+    .swiper-slide:nth-child(3),
+    .swiper-slide:nth-child(1){
+        display: none;
     }
 }
 @media screen and (max-width:763px){
@@ -655,5 +689,11 @@ body {
     }
     .blog__content-info{
         padding: 0;
+    }
+    .swiper-slide:nth-child(1),
+    .swiper-slide:nth-child(2),
+    .swiper-slide:nth-child(3),
+    .swiper-slide:nth-child(4){
+        display: none;
     }
 }
